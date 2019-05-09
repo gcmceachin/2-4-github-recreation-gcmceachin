@@ -41,4 +41,4 @@ Build a static github profile app. __For the design, you should recreate the Git
 Use [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) to make a GET request to the GitHub API and print your repositiory data to the console.
 
 ## Additional Resources
-- [GitHub icon font](https://octicons.github.com/)
+[GitHub icon font](https://octicons.github.com/)
