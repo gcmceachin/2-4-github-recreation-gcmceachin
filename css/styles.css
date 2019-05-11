@@ -8,13 +8,19 @@ img {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
 
 .fa-github-square {
   color: #fff;
   display: inline-block;
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
+}
+
+.sticky-top {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=styles.css.map */
