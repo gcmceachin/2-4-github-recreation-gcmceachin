@@ -15,12 +15,22 @@ body {
 .fa-github-square {
   color: #fff;
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
 }
 
-.sticky-top {
+.navbar-light ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar-light li {
   display: inline-block;
+}
+.navbar-light a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
