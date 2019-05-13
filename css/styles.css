@@ -33,4 +33,8 @@ body {
   text-decoration: none;
 }
 
+footer {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=styles.css.map */
