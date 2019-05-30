@@ -32,6 +32,17 @@ body {
     text-decoration: none;
   }
 }
-footer{
-  display: inline-block;
+
+footer {
+  display: flex;
+}
+
+.footer-left{
+  display: flex;
+  list-style: none;
+}
+
+.footer-right{
+  display: flex;
+  list-style: none;
 }

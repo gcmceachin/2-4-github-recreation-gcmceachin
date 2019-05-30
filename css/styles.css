@@ -34,7 +34,17 @@ body {
 }
 
 footer {
-  display: inline-block;
+  display: flex;
+}
+
+.footer-left {
+  display: flex;
+  list-style: none;
+}
+
+.footer-right {
+  display: flex;
+  list-style: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
