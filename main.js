@@ -11,11 +11,9 @@ $.ajax({
   method: 'GET',
 
   success: function(response) {
+    response = {data: response.data};
     console.log('response', response);
-    response = {
-      results: response.results
-    };
-    renderHTML(response);
+    renderUserHTML(response);
   },
   error: function(xhr) {
     console.log('uh oh, somthing went wrong', xhr.status);
@@ -23,7 +21,7 @@ $.ajax({
 
 });
 
-function renderHTML(response) {
+function renderUserHTML(response) {
     var source = document.getElementById("entry-template").innerHTML;
     var template = Handlebars.compile(source);
 
@@ -31,8 +29,35 @@ function renderHTML(response) {
 
     var html = template(context);
 
-    $('.row').html(html);
+    $('.profile').html(html);
 
   }
+  $.ajax({
+    url: `https://api.github.com/users/gcmceachin/repos?client_id=${Client_ID}&client_secret=${Client_Secret}`,
+    dataType: 'jsonp',
+    method: 'GET',
+
+    success: function(response) {
+      response = {repos: response.data};
+      console.log('response', response);
+      renderRepoHTML(response);
+    },
+
+    error: function(xhr) {
+      console.log('uh oh, somthing went wrong', xhr.status);
+    }
+  });
+
+  function renderRepoHTML(response) {
+      var source = document.getElementById("repository-template").innerHTML;
+      var template = Handlebars.compile(source);
+
+      var context = response;
+
+      var html = template(context);
+
+      $('.repository').html(html);
+
+    }
 
 });
