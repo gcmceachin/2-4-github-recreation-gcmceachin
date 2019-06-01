@@ -6,7 +6,7 @@ const Client_ID = 'Iv1.ea8fd8f633a558f3';
 const Client_Secret ='371f3894fec7f9def91deaae82a40d51fa47f21a';
 
 $.ajax({
-  url: `https://api.github.com/users/gcmceachin?client_id=${Client_ID}&client_secret=${Client_Secret}`,
+  url: 'https://api.github.com/users/gcmceachin?client_id=Iv1.ea8fd8f633a558f3&client_secret=371f3894fec7f9def91deaae82a40d51fa47f21a',
   dataType: 'jsonp',
   method: 'GET',
 
@@ -60,15 +60,15 @@ function renderUserHTML(response) {
 
     }
     $.ajax({
-      url: `"https://api.github.com/users/gcmceachin/orgs"?client_id=${Client_ID}&client_secret=${Client_Secret}`,
+      url: `https://api.github.com/users/gcmceachin/orgs?client_id=${Client_ID}&client_secret=${Client_Secret}`,
       dataType: 'jsonp',
       method: 'GET',
 
       success: function(response) {
-        console.log('response', response);
-        response = {orgs: response.data};
+        response = {organizations: response.data};
+          console.log('response', response);
 
-        renderRepoHTML(response);
+        renderOrganizationsHTML(response);
       },
 
       error: function(xhr) {
@@ -76,7 +76,7 @@ function renderUserHTML(response) {
       }
     });
 
-    function renderRepoHTML(response) {
+    function renderOrganizationsHTML(response) {
         var source = document.getElementById("organizations-template").innerHTML;
         var template = Handlebars.compile(source);
 
@@ -84,8 +84,8 @@ function renderUserHTML(response) {
 
         var html = template(context);
 
-        $('.organizations').html(html);
-    
+        $('.orgs').html(html);
+
       }
 
 });
