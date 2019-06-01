@@ -60,7 +60,8 @@
           </nav>
     </header>
     <div class="row">
-      <aside class="col-md-3 profile">
+      <aside class="col-md-3">
+        <div class='profile'></div>
         <span class='orgs'></span>
       </aside>
 
@@ -110,11 +111,12 @@
             </div>
           </div>
         </div>
+        <div class="repository"></div>
       </div>
     </div>
 
 
-    <div class="repository"></div>
+
 
 
 
@@ -179,7 +181,7 @@
           <span class="dot"></span><span class="repo-lang"></span><i class="fas fa-code-branch"></i>
           <p>Updated Jan 7</p>
           <div class="col-md-offset-4">
-            <button type="button" class="btn btn-light btn-sm">Star</button>
+            <button type="button" class="btn btn-light btn-sm"></button>
           </div>
         </div>
       </main>
@@ -199,11 +201,14 @@
         <button type="button" class="btn btn-light btn-lg btn-block">Edit Profile</button>
         <p class="font-weight-light"><a href="#">Block or Report user</a></p>
       </div>
+      <span>{{data.bio}}</span>
+      <a>{{data.email}}</a>
     </div>
   </script>
   <script id='organizations-template' type='text/x-handlebars-template'>
+    <h5 class='border-top'>Organizations</h5>
     {{#each organizations}}
-      <span class=''><img class='org-pic'src='{{avatar_url}}' alt="" ></span>
+      <span class=''><img class='org-pic' src='{{avatar_url}}' alt=""></span>
 
     {{/each}}
   </script>

@@ -2,17 +2,18 @@ $(document).ready(function() {
 
 'use strict';
 
-const Client_ID = 'Iv1.ea8fd8f633a558f3';
-const Client_Secret ='371f3894fec7f9def91deaae82a40d51fa47f21a';
+const Client_ID = '0f37d9a7d87d34d21559';
+const Client_Secret ='c7bdcd8fd2c6f34f5e45a1e1b337bc7b4a892c75';
 
 $.ajax({
-  url: 'https://api.github.com/users/gcmceachin?client_id=Iv1.ea8fd8f633a558f3&client_secret=371f3894fec7f9def91deaae82a40d51fa47f21a',
+  url: 'https://api.github.com/users/gcmceachin?client_id=0f37d9a7d87d34d21559&client_secret=c7bdcd8fd2c6f34f5e45a1e1b337bc7b4a892c75',
   dataType: 'jsonp',
   method: 'GET',
 
   success: function(response) {
     response = {data: response.data};
     console.log('response', response);
+
     renderUserHTML(response);
   },
   error: function(xhr) {
