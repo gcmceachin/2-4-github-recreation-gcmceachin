@@ -84,8 +84,8 @@ function renderUserHTML(response) {
 
         var html = template(context);
 
-        $('.repository').html(html);
-
+        $('.organizations').html(html);
+    
       }
 
 });

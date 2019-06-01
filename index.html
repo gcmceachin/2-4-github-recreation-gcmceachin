@@ -63,6 +63,8 @@
       <aside class="col-md-3 profile">
 
       </aside>
+      <span class='organizations'></span>
+
       <div class="col-md-9">
         <nav class="navbar sticky-top navbar-light bg-light">
           <a class="navbar" href="#"></a>
@@ -165,11 +167,6 @@
     </div>
   </div>
 
-  <script id='profile-template' type='text/x-handlebars-template'>
-
-
-  </script>
-
   <script id="repository-template" type="text/x-handlebars-template">
     {{#each repos}}
       <main class="user-repository-list">
@@ -190,7 +187,7 @@
   </script>
 
   <script id="entry-template" type="text/x-handlebars-template">
-    <img src="https://avatars3.githubusercontent.com/u/49200171?s=40&v=4" alt="">
+    <img src="{{data.avatar_url}}" alt="">
     <div class="avatar-name">
       <span>
         <h2>{{data.name}}</h2>
@@ -199,11 +196,17 @@
         <span>
           <p>{{data.login}}</p>
         </span>
-        <button type="button" class="btn btn-light btn-lg btn-block">Follow</button>
+        <button type="button" class="btn btn-light btn-lg btn-block">Edit Profile</button>
         <p class="font-weight-light"><a href="#">Block or Report user</a></p>
       </div>
     </div>
   </script>
+  <script id='organizations-template' type='text/x-handlebars-template'>
+
+
+  </script>
+
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js'></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
