@@ -59,5 +59,33 @@ function renderUserHTML(response) {
       $('.repository').html(html);
 
     }
+    $.ajax({
+      url: `"https://api.github.com/users/gcmceachin/orgs"?client_id=${Client_ID}&client_secret=${Client_Secret}`,
+      dataType: 'jsonp',
+      method: 'GET',
+
+      success: function(response) {
+        console.log('response', response);
+        response = {orgs: response.data};
+
+        renderRepoHTML(response);
+      },
+
+      error: function(xhr) {
+        console.log('uh oh, somthing went wrong', xhr.status);
+      }
+    });
+
+    function renderRepoHTML(response) {
+        var source = document.getElementById("organizations-template").innerHTML;
+        var template = Handlebars.compile(source);
+
+        var context = response;
+
+        var html = template(context);
+
+        $('.repository').html(html);
+
+      }
 
 });
