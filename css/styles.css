@@ -51,4 +51,9 @@ footer {
   width: 33px;
 }
 
+input.repo-search {
+  width: 25%;
+  display: inline-flex;
+}
+
 /*# sourceMappingURL=styles.css.map */
