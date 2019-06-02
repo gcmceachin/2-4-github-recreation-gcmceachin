@@ -19,7 +19,7 @@
         <form class="form-inline col-md">
           <input class="form-control mr-sm-2" type="search or jump to" placeholder="Search or Jump to" aria-label="Search or Jump to">
           <ul class="nav">
-            <li class="nav-item">
+            <li class="nav-item-top">
               <a class="nav-link" href="#">
                 <p class="text-white">Pull Requests</p>
               </a>
@@ -67,7 +67,7 @@
 
 
       <div class="col-md-9">
-        <nav class="navbar sticky-top navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-light bg-light border-bottom">
           <a class="navbar" href="#"></a>
           <div class="nav-underheader">
             <ul class="nav-col-md">
@@ -93,7 +93,7 @@
           </div>
         </nav>
         <input class="form-control mr-sm-2 repo-search" type="Find a Repository" placeholder="Find a Repository...." aria-label="Find a Repository">
-         <div class="btn-group" role="group">
+        <div class="btn-group" role="group">
           <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Type:All
           </button>
@@ -112,83 +112,83 @@
           </div>
         </div>
         <div class="repository"></div>
+      </div>
+
+
+
+
+
+
+      <div class="row">
+        <footer class="col-md">
+          <p>Copyright Github, Inc</p>
+          <ul class="footer-left">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Status</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+          </ul>
+          <div class="icon"><i class="fab fa-github-square" href="#"></i></div>
+          <ul class="footer-right">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">API</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Training</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+
+        </footer>
+      </div>
     </div>
 
-
-
-
-
-
-    <div class="row">
-      <footer class="col-md">
-        <p>Copyright Github, Inc</p>
-        <ul class="footer-left">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Terms</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Policy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Security</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Status</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li>
-        </ul>
-        <div class="icon"><i class="fab fa-github-square" href="#"></i></div>
-        <ul class="footer-right">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Github</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">API</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Training</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-
-      </footer>
-    </div>
-  </div>
-
-  <script id="repository-template" type="text/x-handlebars-template">
-    {{#each repos}}
-      <main class="user-repository-list">
-        <div class="col-md-9">
-          <a href="dotfiles">
-            <h5>{{name}}</h5>
-          </a>
-          <span <p class="font-weight-light"></p>Forked from mattjmorrison</span>
-          <span <p class="font-weight-light"></p>Dotfiles and an install script for an easy setup</span>
-          <span class="dot"></span><span class="repo-lang"></span><i class="fas fa-code-branch"></i>
-          <p>Updated Jan 7</p>
-          <div class="col-md-offset-4">
-            <button type="button" class="btn btn-light btn-sm">Star</button>
+    <script id="repository-template" type="text/x-handlebars-template">
+      {{#each repos}}
+        <main class="user-repository-list">
+          <div class="col-md-9">
+            <a href="dotfiles">
+              <h5>{{name}}</h5>
+            </a>
+            <span <p class="font-weight-light"></p>Forked from mattjmorrison</span>
+            <span <p class="font-weight-light"></p>Dotfiles and an install script for an easy setup</span>
+            <span class="dot"></span><span class="repo-lang"></span><i class="fas fa-code-branch"></i>
+            <p>Updated Jan 7</p>
+            <div class="col-md-offset-4">
+              <button type="button" class="btn btn-light btn-sm">Star</button>
+            </div>
           </div>
-        </div>
-      </main>
-    {{/each}}
-  </script>
+        </main>
+      {{/each}}
+    </script>
 
-  <script id="entry-template" type="text/x-handlebars-template">
-    <img src="{{data.avatar_url}}" alt="">
+    <script id="entry-template" type="text/x-handlebars-template">
+      <img src="{{data.avatar_url}}" alt="">
     <div class="avatar-name">
       <span>
         <h2>{{data.name}}</h2>
@@ -204,20 +204,20 @@
       <a>{{data.email}}</a>
     </div>
   </script>
-  <script id='organizations-template' type='text/x-handlebars-template'>
-    <h5 class='border-top'>Organizations</h5>
+    <script id='organizations-template' type='text/x-handlebars-template'>
+      <h5 class='border-top'>Organizations</h5>
     {{#each organizations}}
       <span class=''><img class='org-pic' src='{{avatar_url}}' alt=""></span>
 
     {{/each}}
   </script>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js'></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src='main.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src='main.js'></script>
 
 </body>
 
