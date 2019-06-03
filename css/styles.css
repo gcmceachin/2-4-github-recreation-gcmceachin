@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 16px;
   list-style: none;
-  border: 10px, solid-black;
+  border: 10px;
 }
 .navbar-light li {
   display: inline-block;
@@ -57,6 +57,20 @@ footer {
 input.repo-search {
   width: 50%;
   display: inline-flex;
+}
+
+.badge-success {
+  width: 70px;
+}
+
+.repo-language-color {
+  border-radius: 50%;
+  display: inline-block;
+  height: 12px;
+  position: relative;
+  top: 1px;
+  width: 12px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */
